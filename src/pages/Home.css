@@ -1,0 +1,243 @@
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem; /* ⬅️ Change this value to increase/decrease spacing */
+  padding: 2rem 1rem;
+}
+
+.mood-item {
+  text-align: center;
+}
+
+.mood-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mood-title {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+.fragrance-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.fragrance-container img {
+  flex: 1 1 30%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .fragrance-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fragrance-container img {
+    flex: none;
+    width: 80%;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+}
+
+.featured-glass-section {
+  padding: 5rem 2rem;
+  background: #fffaf4;
+  text-align: center;
+}
+
+.featured-glass-heading {
+  font-size: 2.7rem;
+  color: #8b5d23;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px #e3c09b;
+}
+
+.glass-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+.glass-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.glass-card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.glass-card-info h3 {
+  margin: 0.3rem 0;
+  font-size: 1.3rem;
+  color: #703e14;
+}
+
+.glass-card-info p {
+  font-weight: bold;
+  color: #d6863f;
+}
+
+.glass-button-link {
+  text-decoration: none;
+}
+
+.glass-button {
+  margin-top: 3rem;
+  padding: 0.9rem 2.5rem;
+  background-color: #d6863f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 12px rgba(214, 134, 63, 0.4);
+}
+
+.glass-button:hover {
+  background-color: #bb6a27;
+}
+/* Featured Candles Section Styles */
+.featured-candle-card {
+  max-width: 280px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 0; /* Sharp edges */
+  text-align: center;
+}
+
+.featured-candle-card:hover {
+  transform: scale(1.05);
+}
+
+.candle-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 0; /* Sharp edges on the image */
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-now-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #65000b;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.buy-now-button:hover {
+  background-color: #9c1c27;
+}
+
+.rating {
+  color: #ff9800;
+  font-size: 1.2rem;
+}
+
+.view-all-button {
+  padding: 1rem 2rem;
+  background-color: #65000b;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-all-button:hover {
+  background-color: #9c1c27;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #65000b; /* Arrow color */
+  background-color: rgba(255, 255, 255, 0.6); /* Background behind arrows */
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 10; /* Ensure arrows are above the content */
+}
+
+/* Hover effect for arrows */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #65000b;
+  color: #fff;
+}
+
+/* Desktop visible, mobile hidden */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.mood-swiper {
+  display: none;
+}
+
+/* Mobile visible, desktop hidden */
+@media (max-width: 768px) {
+  .mood-grid {
+    display: none;
+  }
+  .mood-swiper {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .section-description {
+    display: none;
+  }
+}

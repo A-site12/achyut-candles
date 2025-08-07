@@ -1,0 +1,281 @@
+/* === Top Announcement Bar === */
+.announcement-bar {
+  background-color: #F8daaf;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+
+  /* Layout fix */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Add this */
+  text-align: center;
+}
+
+
+
+
+
+/* === Border Below Announcement === */
+.border-bottom {
+  border-bottom: 2px solid #ccc;
+}
+
+/* === Navbar Container === */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+/* === Logo === */
+.logo {
+  font-size: 1.8rem;
+  color: #DAA520;
+  cursor: pointer;
+  font-weight: 900;
+  user-select: none;
+}
+
+/* === Navigation Links === */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #DAA520;
+}
+
+/* === Admin Link === */
+.nav-links a.admin-link {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.nav-links a.admin-link:hover {
+  color: #e74c3c;
+}
+
+/* === Icons (Search + Cart) === */
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+/* === Cart Icon + Badge === */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #DAA520;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+/* === Burger Menu === */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* === Burger Animation === */
+.burger.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle .line2 {
+  opacity: 0;
+}
+.burger.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Desktop Only Items === */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-cart-link {
+  display: none;
+}
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    order: 1;
+  }
+
+  .logo {
+    order: 2;
+    font-size: 1.5rem;
+  }
+
+  .nav-icons {
+    order: 3;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .cart-icon {
+    display: none;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-cart-link {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+}
+
+/* === Announcement Message Animation === */
+.animated-message {
+  animation: fadeInOut 6s ease-in-out infinite;
+  font-weight: 600;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+/* === Login/Logout Link === */
+.nav-link-like {
+  margin-left: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  align-self: center;
+}
+
+.nav-link-like:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* === Tiny Responsive Fixes === */
+@media (max-width: 480px) {
+  .nav-link-like {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
+/*==DROPDOWN==*/
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown span {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* === Logo Image === */
+.logo img,
+.logo-image {
+  max-height: 100px;  /* increase or decrease as needed */
+  display: block;
+  margin: 0 auto 4px auto;
+  object-fit: contain;
+}
