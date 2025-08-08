@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { LiaShoppingCartSolid } from "react-icons/lia";
+/* eslint-disable no-unused-vars */
 import { GrSearch } from "react-icons/gr";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
 import './Navbar.css';

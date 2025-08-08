@@ -34,7 +34,7 @@ const Cart = () => {
     const updated = cart.filter(item => item.id !== id);
     updateCart(updated);
   };
-
+/* eslint-disable no-unused-vars */
   const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
 

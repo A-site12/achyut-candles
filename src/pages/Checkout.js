@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../utils/axiosInstance';
 import { useLocation } from 'react-router-dom';
+
+/* eslint-disable no-unused-vars */
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

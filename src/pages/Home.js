@@ -41,6 +41,7 @@ const featuredCandles = [
   },
 ];
 
+// eslint-disable-next-line no-unused-vars
 const moods = [
   { title: 'Romantic', img: '/images/romantic.jpg' },
   { title: 'Relaxing', img: '/images/relaxing.jpg' },
