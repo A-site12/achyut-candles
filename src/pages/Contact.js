@@ -35,8 +35,8 @@ const Contact = () => {
           <FcSupport style={{ marginRight: '0.5rem' }} />
           Support:
         </h4>
-        <p>Email: <a href="mailto:customercare@taraglobal.in">achyutcandles@gmail.com</a></p>
-        <p>Sales and Support: <a href="tel:+918104148660">+91 8878561696</a></p>
+        <p>Email: <a href="mailto:achyutcandles@gmail.com">achyutcandles@gmail.com</a></p>
+        <p>Sales and Support: <a href="tel:+918878561696">+91 8878561696</a></p>
       </section>
 
       <section style={{ marginTop: '3rem' }}>

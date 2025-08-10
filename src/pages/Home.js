@@ -713,21 +713,7 @@ Achyut means “eternal”  and we’re here to make sure the light never fade
   <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.9rem' }}>
     &copy; {new Date().getFullYear()} Achyut Candles. All rights reserved.
   </p>
-
-<div style={{ width: '20%', height: '200px', marginTop: '1rem' }}>
-  <iframe
-    title="Our Location"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0359979446965!2d-122.42067968468155!3d37.77492977975995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818c3df1bd57%3A0x4c1a0a90b0f2b0a1!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1634410194573!5m2!1sen!2sus"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-
-
+  
 </footer>
 
     </div>

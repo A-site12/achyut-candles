@@ -1,22 +1,49 @@
-/* === Top Announcement Bar === */
+/* ✅ Announcement Bar */
 .announcement-bar {
-  background-color: #F8daaf;
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  font-weight: 600;
-
-  /* Layout fix */
   width: 100%;
+  background-color: #f4e1c1;
+  color: #5a3e1b;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  overflow: hidden; 
+  position: relative;  
+  height: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* ✅ Add this */
-  text-align: center;
+  align-items: center;
+}
+
+.announcement-text {
+  display: inline-block;
+  animation: scrollUp 0.6s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.announcement-text:hover {
+  text-decoration: underline;
+}
+
+/* Keyframes for vertical scrolling */
+@keyframes scrollUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  20% { transform: translateY(0); opacity: 1; }
+  80% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
 }
 
 
-
+/* Horizontal scrolling keyframes 
+@keyframes scrollText {
+  0% { transform: translateX(100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+*/
 
 
 /* === Border Below Announcement === */
@@ -191,17 +218,6 @@
   }
 }
 
-/* === Announcement Message Animation === */
-.animated-message {
-  animation: fadeInOut 6s ease-in-out infinite;
-  font-weight: 600;
-}
-
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  10%, 90% { opacity: 1; }
-}
-
 /* === Login/Logout Link === */
 .nav-link-like {
   margin-left: 1rem;
@@ -229,6 +245,7 @@
     font-size: 1.3rem;
   }
 }
+
 /*==DROPDOWN==*/
 
 /* Dropdown Menu */
@@ -274,7 +291,7 @@
 /* === Logo Image === */
 .logo img,
 .logo-image {
-  max-height: 100px;  /* increase or decrease as needed */
+  max-height: 100px;
   display: block;
   margin: 0 auto 4px auto;
   object-fit: contain;
