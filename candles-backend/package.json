@@ -1,0 +1,46 @@
+{
+  "name": "candles-backend",
+  "version": "1.0.0",
+  "description": "Backend API for candle selling website using Express and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.3",
+    "react-beautiful-dnd": "^13.1.1",
+    "winston": "^3.17.0",
+    "xss": "^1.0.15",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-site12/candles-backend.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/A-site12/candles-backend/issues"
+  },
+  "homepage": "https://github.com/A-site12/candles-backend#readme"
+}

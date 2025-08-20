@@ -1,0 +1,73 @@
+[2025-06-29 15:58:23] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 15:58:23] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 15:58:36] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 15:58:36] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 16:00:15] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:17:18] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:18:35] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:32:59] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:34:29] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:37:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 16:37:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 16:37:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 16:37:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - GET /api/products - ::1
+[2025-06-29 16:37:33] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:40:50] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:44:59] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:45:13] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::1
+[2025-06-29 16:49:26] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:00] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:01] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:02] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:02] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:03] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:04] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:04] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:04] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:04] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:05] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:06] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:06] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:06] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:06] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:06] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:07] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:07] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:07] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:07] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:07] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:08] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:09] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:09] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:09] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:09] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:09] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:10] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:10] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:10] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:10] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:53:10] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 16:56:47] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter - POST /api/auth/login - ::ffff:127.0.0.1
+[2025-06-29 17:03:52] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 17:04:00] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 17:11:44] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 20:02:47] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 20:04:40] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 20:05:12] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 20:13:27] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-29 20:13:53] ERROR: Not allowed by CORS - POST /api/auth/login - ::1
+[2025-06-30 12:46:00] ERROR: Expected property name or '}' in JSON at position 5 (line 2 column 3) - POST /api/products - ::ffff:127.0.0.1
+[2025-07-29 01:18:29] ERROR: Callback function is not available with promise clients. - GET /api/products - 127.0.0.1
+[2025-07-29 01:18:39] ERROR: Callback function is not available with promise clients. - GET /api/products - 127.0.0.1
+[2025-07-29 01:18:39] ERROR: Callback function is not available with promise clients. - GET /api/products - 127.0.0.1
+[2025-07-29 01:18:45] ERROR: Callback function is not available with promise clients. - GET /api/products - 127.0.0.1
+[2025-07-29 01:18:45] ERROR: Callback function is not available with promise clients. - GET /api/products - 127.0.0.1
+[2025-08-10 13:39:47] ERROR: Callback function is not available with promise clients. - GET /api/products - ::1
