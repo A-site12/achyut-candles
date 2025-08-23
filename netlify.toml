@@ -1,6 +1,6 @@
 [build]
   base = "achyut-candles"
-  publish = "achyut-candles/build"
+  publish = "build"
   command = "npm run build"
 
 [build.environment]
