@@ -1,0 +1,4 @@
+[build]
+  base = "achyut-candle"
+  publish = "achyut-candle/build"
+  command = "npm run build"
