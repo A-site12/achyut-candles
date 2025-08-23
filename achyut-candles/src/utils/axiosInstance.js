@@ -1,29 +1,25 @@
 // src/utils/axiosInstance.js
 import axios from 'axios';
 
-// Create an Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3001/api', // Update if needed
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:3001/api',
 });
 
-// Request: Attach token
 axiosInstance.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token'); // Or sessionStorage
+  const token = localStorage.getItem('token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
 });
 
-// Response: Handle token expiry
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Token expired or invalid
-      localStorage.removeItem('token'); // Or sessionStorage
+      localStorage.removeItem('token');
       alert('Session expired. Please log in again.');
-      window.location.href = '/login'; // Redirect to login page
+      window.location.href = '/login';
     }
     return Promise.reject(error);
   }

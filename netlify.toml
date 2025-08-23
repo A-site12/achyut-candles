@@ -1,4 +1,8 @@
 [build]
-  base = "achyut-candle"
-  publish = "achyut-candle/build"
+  base = "achyut-candles"
+  publish = "achyut-candles/build"
   command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+6
