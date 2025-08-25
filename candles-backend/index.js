@@ -22,8 +22,6 @@ app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3001;
 
 // === SECURITY MIDDLEWARES ===
-
-// Helmet with secure CSP setup
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -37,10 +35,10 @@ app.use(
         ],
         fontSrc: ["'self'", 'https://fonts.gstatic.com'],
         imgSrc: ["'self'", 'data:', 'blob:'],
-        // ✅ Allow both local and deployed frontend to talk to API
         connectSrc: [
           "'self'",
-          process.env.CLIENT_ORIGIN || 'http://localhost:3000'
+          process.env.CLIENT_ORIGIN || 'http://localhost:3000',
+          'https://achyut-candles.netlify.app'
         ],
         objectSrc: ["'none'"],
         upgradeInsecureRequests: [],
@@ -64,16 +62,24 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+// === CORS Setup ===
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://achyut-candles.netlify.app'
+];
+
 app.use(
   cors({
-    origin: [
-      process.env.CLIENT_ORIGIN || 'http://localhost:3000',
-      'https://achyut-candles.netlify.app', // ✅ your actual Netlify frontend
-    ],
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS: ' + origin));
+      }
+    },
     credentials: true,
   })
 );
-
 
 // Enforce HTTPS in production (Render/Netlify fix)
 app.use((req, res, next) => {
