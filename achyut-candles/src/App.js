@@ -24,13 +24,15 @@ import Romantic from './pages/Romantic';
 import Energizing from './pages/Energizing';
 import Meditation from './pages/Meditation';
 
-import { ToastContainer, toast } from 'react-toastify'; //for mordern login error failed alert
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+// ✅ Use environment variable for API base
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
 
 function App() {
   const navigate = useNavigate();
 
-  // Load and persist cart from localStorage
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem('cart');
     return savedCart ? JSON.parse(savedCart) : [];
@@ -40,7 +42,6 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  // Load and persist user from localStorage
   const [user, setUser] = useState(() => {
     const savedUser = localStorage.getItem('user');
     return savedUser ? JSON.parse(savedUser) : null;
@@ -53,7 +54,6 @@ function App() {
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
-  // Add to cart
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existingIndex = prevCart.findIndex((item) => item.id === product.id);
@@ -67,10 +67,10 @@ function App() {
     });
   };
 
-  // Login
+  // ✅ Login (now uses API_URL)
   const handleLogin = async (email, password) => {
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -97,10 +97,10 @@ function App() {
     }
   };
 
-  // Signup
+  // ✅ Signup (now uses API_URL)
   const handleSignup = async (username, email, password) => {
     try {
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch(`${API_URL}/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),
