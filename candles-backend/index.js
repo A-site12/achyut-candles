@@ -64,16 +64,16 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// Enable CORS for frontend
 app.use(
   cors({
     origin: [
       process.env.CLIENT_ORIGIN || 'http://localhost:3000',
-      'https://candles-frontend.netlify.app',   // ✅ replace with your actual Netlify frontend URL
+      'https://achyut-candles.netlify.app', // ✅ your actual Netlify frontend
     ],
     credentials: true,
   })
 );
+
 
 // Enforce HTTPS in production (Render/Netlify fix)
 app.use((req, res, next) => {
