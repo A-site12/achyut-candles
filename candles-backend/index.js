@@ -16,7 +16,7 @@ const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 
-// ** TRUST PROXY FIX FOR EXPRESS-RATE-LIMIT **
+// ** TRUST PROXY FIX FOR EXPRESS-RATE-LIMIT (needed for Render/Netlify) **
 app.set('trust proxy', 1);
 
 const PORT = process.env.PORT || 3001;
@@ -24,21 +24,31 @@ const PORT = process.env.PORT || 3001;
 // === SECURITY MIDDLEWARES ===
 
 // Helmet with secure CSP setup
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", 'https://cdn.jsdelivr.net'],
-      styleSrc: ["'self'", 'https://fonts.googleapis.com', 'https://cdn.jsdelivr.net'],
-      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'blob:'],
-      connectSrc: ["'self'", process.env.CLIENT_ORIGIN || 'http://localhost:3000'],
-      objectSrc: ["'none'"],
-      upgradeInsecureRequests: [],
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", 'https://cdn.jsdelivr.net'],
+        styleSrc: [
+          "'self'",
+          'https://fonts.googleapis.com',
+          'https://cdn.jsdelivr.net'
+        ],
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        imgSrc: ["'self'", 'data:', 'blob:'],
+        // ✅ Allow both local and deployed frontend to talk to API
+        connectSrc: [
+          "'self'",
+          process.env.CLIENT_ORIGIN || 'http://localhost:3000'
+        ],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
     },
-  },
-  crossOriginEmbedderPolicy: false,
-}));
+    crossOriginEmbedderPolicy: false,
+  })
+);
 
 // Prevent XSS attacks
 app.use(xss());
@@ -55,14 +65,22 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Enable CORS for frontend
-app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || 'http://localhost:3000',
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      process.env.CLIENT_ORIGIN || 'http://localhost:3000',
+      'https://candles-frontend.netlify.app',   // ✅ replace with your actual Netlify frontend URL
+    ],
+    credentials: true,
+  })
+);
 
-// Enforce HTTPS in production
+// Enforce HTTPS in production (Render/Netlify fix)
 app.use((req, res, next) => {
-  if (process.env.NODE_ENV === 'production' && req.headers['x-forwarded-proto'] !== 'https') {
+  if (
+    process.env.NODE_ENV === 'production' &&
+    req.headers['x-forwarded-proto'] !== 'https'
+  ) {
     return res.redirect(`https://${req.headers.host}${req.url}`);
   }
   next();
